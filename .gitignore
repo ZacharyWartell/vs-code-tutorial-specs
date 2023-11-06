@@ -1,0 +1,8 @@
+# tmp files created in Windows
+~*
+*.html~
+*.bak
+www-site/*/zjwgi
+scripts/zjwgi
+www-site-mirror/**
+www-site-mirror
