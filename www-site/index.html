@@ -115,7 +115,7 @@
             <h2 class="nocount Title">Fall 2023</h2>
             <h3 class="nocount Title">Professor: Zachary Wartell</h3>
             <div style="display : block; text-align: center;">
-              <div>Revision: <span class="Revision">Wed Nov 8 14:29:22 2023 -0500</span>
+              <div>Revision: <span class="Revision">Wed Nov 8 14:47:36 2023 -0500</span>
                 <sup> (<a href="https://cci-git.charlotte.edu/zwartell/vs-code-tutorial/-/commits/main/"
                     target="_blank">git logs</a>) </sup><br>
                 <br>
@@ -200,6 +200,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
 </pre>
 </code>                                                        
               </li>
+              
               <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
                 Watch the following video follow all the instructions to learn the basics of the VS Code GUI:<br>
                 <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
@@ -212,6 +213,9 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   </figure>
                 </div>                    
               </li>
+              
+              
+              <!--
               <li class="Instruction_Todo">Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
                 that subdirectory.<br>
                 <table class="Code_Example" id="Code_Example1_0">
@@ -234,10 +238,12 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   </tbody>
                 </table>
               </li>                
+              -->
+              <span id="cursor"></span>
               <li class="Instruction_Todo"><u>Exercise [Remote Repo Setup]</u>:
                 <ol>
                   <li>
-                    Create new remote repo on cci-git called,<span class="File_Name"> editing-in-vscode</span> using the
+                    Create new remote repo on cci-git called,<span class="File_Name" data-project-number-long-dir=""></span> using the
                       procedures of <abbr>GT</abbr>: Appendix I <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
                         Git Operations.</a>                    
                   </li>
@@ -248,9 +254,9 @@ Hosts a local server in your workspace for you to preview your webpages on.
                           <td> <button onclick="Code_Example_Toggle('Code_Example1_0');"> ▽ </button> </td>
                           <td>
                             <div> 
-                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>/<span data-project-name-dir="">data-project-name</span>
+                              <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>
                               </code> 
-                              <code class="Shell_Code_Input-v2"> git clone https://<span class="User_Input">Your UserID</span>:<span class="User_Input">Your PAT</span>@cci-git.charlotte.edu/UNCC_Graphics/editing-in-vscode.git
+                              <code class="Shell_Code_Input-v2"> git clone https://<span class="User_Input">Your UserID</span>:<span class="User_Input">Your PAT</span>@cci-git.charlotte.edu/<span class="User_Input">your_user_id</span>/<span class="File_Name" data-project-number-long-dir=""></span>.git <span class="File_Name" data-project-name-dir=""></span>
                               </code>
                             </div>
                           </td>
@@ -270,18 +276,18 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       <td><button onclick="Code_Example_Toggle('Code_Example3');">▽</button></td>
                       <td>
                         <div> 
-                          <code class="Shell_Code_Input-v2">cd editing-in-vscode 
+                          <code class="Shell_Code_Input-v2">cd <span class="File_Name" data-project-name-dir=""></span>
                           </code>
                           <code class="Shell_Code_Prompt-v2">lucretius@CCIWD-435B-1
-                            ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>/editing-in-vscode
+                            ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>
                           </code>
-                          <code class="Shell_Code_Input-v2">git remote add upstream https://<span class="User_Input">your_user_id</span>:<span class="User_Input">your_PAT</span>@cci-git.uncc.edu/UNCC_Graphics/editing-in-vscode
+                          <code class="Shell_Code_Input-v2">git remote add upstream https://<span class="User_Input">your_user_id</span>:<span class="User_Input">your_PAT</span>@cci-git.uncc.edu/UNCC_Graphics_Teaching/vs-code-tutorial.git
                           </code>                            
                             <span class="Shell_Code_Comment">[... the above connects to
                             the original 'upstream' remote, to which you have
                             read-only access ...]</span><br>                            
                             <code class="Shell_Code_Prompt-v2">lucretius@CCIWD-435B-1
-                              ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>/editing-in-vscode
+                              ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>
                             </code>
                           <code class="Shell_Code_Input-v2">git fetch upstream </code>
                           <code class="Shell_Code_Output"> remote: Counting objects:
@@ -290,8 +296,6 @@ Hosts a local server in your workspace for you to preview your webpages on.
                             remote: Total 30 (delta 11), reused 0 (delta 0)<br>
                             <span class="Shell_Code_Comment">[... ]</span><br>
                           </code>
-                          <code class="Shell_Code_Input-v2">git remote add upstream https://<span class="User_Input">your_user_id</span>:<span class="User_Input">your_PAT</span>@cci-git.uncc.edu/UNCC_Graphics/editing-in-vscode
-                          </code>                            
                           <code class="Shell_Code_Input-v2">git merge upstream/main</code>
                           <span class="Shell_Code_Comment">[... the above 2 commands  merge the 'upstream' remote into the local repo...]</span>
                           <br>
@@ -311,7 +315,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       <td>
                         <div style="height: 100px;">
                           <code class="Shell_Code_Prompt-v2">lucretius@CCIWD-435B-1
-                            ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>/editing-in-vscode
+                            ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>/<span class="DataField" data-project-name-dir=""></span>
                           </code>
                           <code class="Shell_Code_Input">$git push -u origin main </code><br>
                           <code class="Shell_Code_Output"> Counting objects: 30, done.<br>
@@ -333,12 +337,12 @@ Hosts a local server in your workspace for you to preview your webpages on.
               </li>              
               <li> <u>Exercise[app.js]:</u> 
                 <ol>                  
-                  <li>In VS Code, open a new window and open the folder <span class="File_Name">ITCS_5122/vs-code-tutorial/editing-in-vscode/</span>                     
+                  <li>In VS Code, open a new window and open the folder <span class="File_Name">ITCS_5122/vs-code-tutorial/</span>                     
                   </li>
-                  <li>Create a subdirectory called <span class="File_Name">ITCS_5122/vs-code-tutorial/editing-in-vscode/hello-world</span> .
+                  <li>Create a subdirectory called <span class="File_Name">ITCS_5122/vs-code-tutorial/hello-world</span> .
                   </li>
                   <li>When you followed the above video's instructions, you created a file <span class="File_Name">app.js</span>.
-                    Copy that file to <span class="File_Name">ITCS_5122/vs-code-tutorial/editing-in-vscode/hello-world</span> 
+                    Copy that file to <span class="File_Name">ITCS_5122/vs-code-tutorial/hello-world</span> 
                   </li>
                   <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-hello-world" .</span> </li>                          
                 </ol>
@@ -352,7 +356,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
               </li>
               <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise[another app.js]</u>:                    
                 <ol class="Instruction_Option Instruction_Todo">                    
-                    <li class="Instruction_Todo">In VS Code, edit the file <span class="File_Name">editing-in-vs-code/first/app.js</span>.  
+                    <li class="Instruction_Todo">In VS Code, edit the file <span class="File_Name">first/app.js</span>.  
                       Modify the file app.js so that the message printed to the console introduces yourself.</li>                          
                     <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-first/app.js" .</span> </li>                          
                 </ol>
@@ -378,7 +382,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                         <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
                     </li>                                                                         
                     <li> <u>Exercise: [Multi Cursor Modifier]</u> <br>
-                      In VS Code, edit the file <span class="File_Name">editing-in-vs-code/basic-editing/frogStory.html</span>.
+                      In VS Code, edit the file <span class="File_Name">basic-editing/frogStory.html</span>.
                        Use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> as follows:
                        <ol>
                         <li>Modify frogStory.html's "pre.FrogStory" section in a manner similar to the '.global-message-list' example in "Multi Cursor Modifier".</li>
@@ -401,18 +405,18 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       </ol>                      
                     </li>                              
                     <li>[<abbr>VSC</abbr>: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save','VSC');">Save/Auto Save</a>]                      
-                      Read and explore the settings in your VS Code.
+                      Read and explore the "Save/Auto Save" settings in your VS Code.
                     </li>                                                            
                     <li data-point-fraction="0">[<abbr>VSC</abbr>: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_hot-exit','VSC');">Hot Exit</a>]                      
                       SKIP.
                     </li>              
-                    <li> <u>Exercise: [a-program-from-an-earlier-course]</u>: In the directory <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>, add any short program that <b>you</b>
-                      wrote in any previous course in any programming language.  
+                    <li> <u>Exercise: [a-program-from-an-earlier-course]</u>: Create a directory <span class="File_Name">basic-editing/a-program-from-an-earlier-course</span>. 
+                      Copy any short program that <b>you</b> wrote in any previous course in any programming language in <span class="File_Name">basic-editing/a-program-from-an-earlier-course</span>
                       <br>
                       You will use this program to play with and learn the VS Code editor features described in the remaining instruction items.
                       <ol>
                         <li>
-                          Edit the file <span class="File_Name">a-program-from-an-earlier-course/README.md</span> to included
+                          Add a file <span class="File_Name">a-program-from-an-earlier-course/README.md</span>. Edit the file to include
                           a brief description of (1) what course you wrote this previous program in and (2) what the program does.
                         </li>
                         <li class="Instruction_Git_Commit"> git add and commit the files with message: <span class="Git_Commit_Message">git commit -m "-a-program-from-an-earlier-course" .</span> </li>
@@ -424,7 +428,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li>[<abbr>VSC</abbr>: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace','VSC');">Find and Replace</a>] .
                       <br>
                       <ol>
-                        <li>Use the Find and Replace feature to rename 5 different variables and/or function names in your code.</li>
+                        <li>Use the Find and Replace feature to rename 5 different variables and/or function names in your "a-program-from-an-earlier-course" code.</li>
                         <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-find and replace" .</span> </li>
                       </ol>                      
                     </li>                                                                          
@@ -440,12 +444,11 @@ Hosts a local server in your workspace for you to preview your webpages on.
                           <li> As described in the "Search Editor",  use the <b>Open New Search Editor</b> button at the top of the Search view.
                           </li>
                           <li>
-                              In the search box, enter the name of a class, variable or function name that is referenced multiple times in the code you chose
-                              for a-program-from-an-earlier-course.
+                              In the search box, enter the name of a class, variable or function name that is referenced multiple times in your "a-program-from-an-earlier-course" code.
                           </li>
                           <li>
                               Take a screen shot of the resulting search window. Save the screen shot at as an PNG image file called "search-editor" 
-                              inside <span class="File_Name">editing-in-vscode/basic-editing/a-program-from-an-earlier-course</span>.                              
+                              inside <span class="File_Name">basic-editing/a-program-from-an-earlier-course</span>.                              
                           </li>
                           <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-search-editor" .</span> </li>
                       </ol>
@@ -454,12 +457,12 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       Read "Intellisense".
                       <br>
                       <ol>
-                        <li>Create a new class in the code file you chose for a-program-from-an-earlier-course.  Add a number of properties and methods to the class.
+                        <li>Create a new class in to a code file in your <span class="File_Name">a-program-from-an-earlier-course</span>.  Add a number of properties and methods to the class.
                           (Name the class and properties anything you want).
                         </li>
-                        <li>Create a new function in the code file you chose for a-program-from-an-earlier-course. (Name the function anything you want).</li>
+                        <li>Create a new function to a code file in your <span class="File_Name">a-program-from-an-earlier-course</span>. (Name the function anything you want).</li>
                         <li>
-                            Inside the above function, allocate several instances of the class you created. 
+                            Inside the above new function, allocate several instances of the class you created. 
                             Add 10 statements to the function that either assign values to these objects' properties or call their methods.
                             While doing so, explore how the Intellisense feature automatically shortens the amount of typing you need to do in
                             order to enter the property and method names.
@@ -481,9 +484,9 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       <br>
                       Read "Folding."
                       <ol>
-                          <li>Experiment with the folding commands on your a-program-from-an-earlier-course code </li>
+                          <li>Experiment with the folding commands on your <span class="File_Name">a-program-from-an-earlier-course</span> code </li>
                           <li>Take 3 screen shots of your code with <u>different</u> levels of folding.   Save those screen shots as 3 PNG files
-                            called "fold1", "fold2" amd "fold3" in your a-program-from-an-earlier-course directory.
+                            called "fold1", "fold2" amd "fold3" in your <span class="File_Name">a-program-from-an-earlier-course</span> directory.
                           </li>
                           <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-folding" .</span> </li>  
                       </ol>
@@ -517,7 +520,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                           inside the sub-window within VS Code and use Live Preview opened in a separate browser.
                           (You can view documentation for the Live Preview extension by selecting the Extensions list, searching for "Live Preview", and selecting 
                           the "Live Preview" extension.  This will open a tab in VS Code with the "Live Preview" documentation).
-                          Use to "Live Preview" to open <span class="File_Name">editing-in-vs-code/basic-editing/frogStory.html</span> in an separate browser window.
+                          Use to "Live Preview" to open <span class="File_Name">basic-editing/frogStory.html</span> in an separate browser window.
                           While running Live Preview modify text of the story about the frog.   Have him hop, skip and perform other antics relative to the water bug.
                           Observe how the Live Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
                         </li>
@@ -527,7 +530,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>]
                       <br> 
                       Read "Start debugging", but note you already installed NodeJS in an earlier step.  "Start debugging" mentions creating a simple NodeJS app.
-                      This has already been done for you in <span class="File_Name">editing-in-vscode/debugging/Hello</span>.  Use that provided
+                      This has already been done for you in <span class="File_Name">debugging/Hello</span>.  Use that provided
                       app to test out the debugging features in "Start debugging" and the additional VSC sections list below.
                     </li>                    
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a>]</li>
@@ -544,7 +547,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     </li>                    
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debug-actions','VSC')">Debug actions</a>]
                       <ol>
-                        <li>Read about the different debug actions.  Play with the code in  <span class="File_Name">editing-in-vscode/debugging/Hello</span>, until you understand how each different debug action works.</li>
+                        <li>Read about the different debug actions.  Play with the code in  <span class="File_Name">debugging/Hello</span>, until you understand how each different debug action works.</li>
                       </ol>
                         
                     </li>
@@ -552,10 +555,10 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>]
                       <ol>
                         <li>
-                          Read about the different breakpoint types.  Play with the  <span class="File_Name">editing-in-vscode/debugging/Hello</span>, until you understand breakpoints.
+                          Read about the different breakpoint types.  Play with the  <span class="File_Name">debugging/Hello</span>, until you understand breakpoints.
                         </li>
                         <li>
-                          Take at least 1 screen shot of the breakpoints you set.  Save the image as a PNG file called "breakpoints" in <span class="File_Name">editing-in-vscode/debugging/Hello</span>.
+                          Take at least 1 screen shot of the breakpoints you set.  Save the image as a PNG file called "breakpoints" in <span class="File_Name">debugging/Hello</span>.
                         </li>
                         <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -breakpoints .</span> </li>
                       </ol>                      
@@ -563,9 +566,9 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     
                     <li class="active">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>]
                       <ol>
-                        <li>Read about the different logpoint types.  Play with the  <span class="File_Name">editing-in-vscode/debugging/Hello</span>, until you understand logpoint.</li>
+                        <li>Read about the different logpoint types.  Play with the  <span class="File_Name">debugging/Hello</span>, until you understand logpoints.</li>
                         <li>
-                          Take at least 1 screen shot of the logpoints you set.  Save the image as a PNG file called "breakpoints" in <span class="File_Name">editing-in-vscode/debugging/Hello</span>.
+                          Take at least 1 screen shot of the logpoints you set.  Save the image as a PNG file called "logpoints" in <span class="File_Name">debugging/Hello</span>.
                         </li>
                         <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -logpoints .</span> </li>
                       </ol>                      
@@ -575,8 +578,8 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       <ol>
                         <li>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</li>
                         <li>
-                          Take at least 1 screen shot of the data inspections tools inspecting the code in  <span class="File_Name">editing-in-vscode/debugging/Hello</span>.
-                          <br>Save the image as a PNG file called "inspection" in <span class="File_Name">editing-in-vscode/debugging/Hello</span>.
+                          Take at least 1 screen shot of the data inspections tools inspecting the code in  <span class="File_Name">debugging/Hello</span>.
+                          <br>Save the image as a PNG file called "inspection" in <span class="File_Name">debugging/Hello</span>.
                         </li>
                         <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -inspection .</span> </li>
                       </ol>                      
@@ -606,10 +609,10 @@ Hosts a local server in your workspace for you to preview your webpages on.
               </li>
               <li data-point-fraction="15"> <u>Exercise: Download and run a D3 example in VS Code</u>
                 <ol>
-                    <li> Create new directory called <span class="File_Name">editing-in-vscode/d3-example</span></li>
+                    <li> Create new directory called <span class="File_Name" data-project-name-dir=""></span>/<span class="File_Name">/d3-example</span></li>
                     <li> Goto <a target="_blank" href="https://d3js.org/getting-started#d3-in-vanilla-html">D3 in vanilla HTML</a></li>
                     <li> Select the "UMD+CDN" tab </li>                    
-                    <li> Create new empty file called <span class="File_Name">editing-in-vscode/d3-example/index.html</span>
+                    <li> Create new empty file called <span class="File_Name" data-project-name-dir=""></span>/<span class="File_Name">d3-example/index.html</span>
                     <li> Copy and paste the code from the "UMD+CDN" tab into the above file and save the file.</li>                    
                     <li> Use the Live Preview in VS Code to run the D3 example</li>
                     <li class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -initial D3 example .</span> </li>                    
