@@ -185,7 +185,18 @@
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>NodeJS - Install:</u>
                   Install NodeJS <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>.
               </li>
-                
+              <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
+                Watch the following video follow all the instructions to learn the basics of the VS Code GUI:<br>
+                <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
+                </a><br>
+                <div class="Side_Note"> <b>Side Note:</b>
+                  In the above video and it's associated reading, the VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                  Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
+                  <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                      <img src="images/terminal.png" alt="images/terminal.png">
+                  </figure>
+                </div>                    
+              </li>                
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Live Preview Extension:</u> Install the following VS Code extensions (or the lastest version of it). Instructions regarding installing VS Code
                 extensions are found at <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/extension-marketplace','VSC')">extensions marketplace</a>.
 <code>
@@ -200,19 +211,62 @@ Hosts a local server in your workspace for you to preview your webpages on.
 </pre>
 </code>                                                        
               </li>
-              
-              <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
-                Watch the following video follow all the instructions to learn the basics of the VS Code GUI:<br>
-                <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
-                </a><br>
-                <div class="Side_Note"> <b>Side Note:</b>
-                  In the above video and it's associated reading, the VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
-                  Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
-                  <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
-                      <img src="images/terminal.png" alt="images/terminal.png">
-                  </figure>
-                </div>                    
+              <li class="Instruction_Composite"><span class="Instruction_Title">Extension "Live Server"</span>&nbsp;&nbsp;&nbsp;
+                In the video above you installed a VSCode extension "Live
+                Preview".&nbsp;&nbsp; We will use a better alternative,"Live
+                Server by Ritwick Dey" (v5.7.9 or newer). Install this VSCode
+                extension now. &nbsp;&nbsp; After installing, adjust the
+                following settings: <br>
+                <ol>
+                  <li class="Instruction_Todo">Left click the settings icon on
+                    the Live Server extension:<br>
+                    <img src="images/live-server-icon.png"> </li>
+                  <li class="Instruction_Todo">In the popup menu select the menu
+                    item, <span class="File_Name">Extension Settings. <br>
+                    </span>This will open up a window with a variety of settings
+                    for this extension</li>
+                  <li class="Instruction_Todo">Find the setting, <span class="File_Name">Live
+                      Server › Settings: Custom Browser</span>, and in the drop
+                    down menu select the browser: "chrome."</li>
+                </ol>
               </li>
+              <li class="Instruction_Todo"><span class="Instruction_Title">Clone WGL PG Code</span>&nbsp;&nbsp;
+                In your ITCS_3120 directory, clone the WebGL Programming Guide
+                example code:
+                <table class="Code_Example">
+                  <tbody>
+                    <tr>
+                      <td><button>▽</button></td>
+                      <td>
+                        <div style="height: fit-content;"> <code class="Shell_Code_Prompt">lucretius@Monad42
+                            ~/ITCS_<span class="DataField" data-course-number=""></span>/</code>
+                          <br>
+                          <code class="Shell_Code_Input">$git clone https://cci-git.charlotte.edu/UNCC_Graphics_Third_Party_Libraries/WebGL_Programming_Guide.git</code>
+                          <code class="Shell_Code_Output"><br>
+                          </code> </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li class="Instruction_Todo"><span class="Instruction_Title">View WGL PG Examples in VS Code</span>&nbsp;&nbsp;
+                In VS Code, from the main menu select items <span class="File_Name">File
+                  -&gt; Open Folder</span> and select the above folder, i.e. <span
+                  class="File_Name">WebGL_Programming_Guide.</span>&nbsp;&nbsp;
+                This will load the code files in this directory.&nbsp; They will
+                appear listed in the VS Code (left side) Explorer
+                panel,&nbsp;&nbsp;&nbsp; In the Explorer panel, right-click the
+                file <span class="File_Name">index.html</span>.&nbsp; In the
+                pop-up menu, select <span class="File_Name">Open with Live
+                  Server</span>. &nbsp; Select some of links to run some of the
+                examples.<br>
+                The video below illustrates these instructions:<br>
+                <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_hd3gg1gn&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_3z5k2v3w"
+                  allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+                  allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+                  title="Kaltura Capture recording - April 5th 2023, 9:53:43 am"
+                  height="285" frameborder="0" width="400"></iframe> 
+                </li>
               
               
               <!--
@@ -331,17 +385,18 @@ Hosts a local server in your workspace for you to preview your webpages on.
                 <br>
               </li>             
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise [<abbr>VSC</abbr>:Code editing in Visual Studio Code]</u>: <br>
-                Watch the video below and follow all the video instructions:<br>
-              <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a><br>
+                Watch the video, <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/codeediting','VSC')">https://code.visualstudio.com/docs/introvideos/codeediting</a>,
+                and <u>perform</u> all the video's instructions.<br>
+              <br>
               </li>              
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666"> <u>Exercise[app.js]:</u> 
                 <ol>                  
-                  <li>In VS Code, open a new window and open the folder <span class="File_Name">ITCS_5122/vs-code-tutorial/</span>                     
+                  <li>In VS Code, open a new window and open the folder <span class="File_Name">ITCS_<span class="DataField" data-course-number=""></span>/vs-code-tutorial/</span>                     
                   </li>
-                  <li>Create a subdirectory called <span class="File_Name">ITCS_5122/vs-code-tutorial/hello-world</span> .
+                  <li>Create a subdirectory called <span class="File_Name">ITCS_<span class="DataField" data-course-number=""></span>/vs-code-tutorial/hello-world</span> .
                   </li>
                   <li>When you followed the above video's instructions, you created a file <span class="File_Name">app.js</span>.
-                    Copy that file to <span class="File_Name">ITCS_5122/vs-code-tutorial/hello-world</span> 
+                    Copy that file to <span class="File_Name">ITCS_<span class="DataField" data-course-number=""></span>/vs-code-tutorial/hello-world</span> 
                   </li>
                   <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-hello-world" .</span> </li>                          
                 </ol>
@@ -604,6 +659,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     -->                
                 </ol>
               </li>
+              <!-- D3 Specific VSCode integration
               <li class="Instruction_Todo" data-point-fraction="15"> <u>Exercise: Download and run a D3 example in VS Code</u>
                 <ol>
                     <li> Create new directory called <span class="File_Name" data-project-name-dir=""></span>/<span class="File_Name">/d3-example</span></li>
@@ -624,6 +680,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -final D3 example .</span> </li>                    
                 </ol>
               </li>
+              -->
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666">
                 <b>Git Push</b>:   Don't forget to git push all your work to your remote repository
               </li>
