@@ -401,8 +401,8 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-hello-world" .</span> </li>                          
                 </ol>
               </li>                                      
-              <li class="Instruction_Todo" data-point-no-fraction="0.41666666">
-                  <u>Read [<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes','VSC')">staging-and-committing-code-changes</a>]</u>:
+              <li class="Instruction_Todo" data-point-fraction="0">
+                  <u>Optional Read [<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes','VSC')">staging-and-committing-code-changes</a>]</u>:
                   This is optional.  All IDEs have extensions built in for performing Git operations.  You may optionally choose to use VS Code's Git GUI 
                   for the <b>simple</b> git instructions in this tutorial (such as git add and commit). <br>
                   However, for more <b>all more complex</b> git 
@@ -426,13 +426,13 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       <u> [<abbr>VSC</abbr>:
                             <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts','VSC');">keyboard shortcuts</a>]
                       </u>
-                      Read up and including "Keyboard Shortcuts"
+                      Read up to and including "Keyboard Shortcuts"
                     </li>
                     
                     <li class="Instruction_Reading">
                       <u>[<abbr>VSC</abbr>: 
                         <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor','VSC');">multiple-selections-multicursor</a>]</u>
-                        Read "Multiple Selections Multicursor" upto and including 
+                        Read "Multiple Selections Multicursor" up to and including 
                         <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier','VSC');">Multi Cursor Modifier</a>.
                     </li>                                                                         
                     <li> <u>Exercise: [Multi Cursor Modifier]</u> <br>
@@ -445,11 +445,11 @@ Hosts a local server in your workspace for you to preview your webpages on.
                        </ol>
                     </li>
                     <li>[<abbr>VSC</abbr>:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection','VSC');">Shrink/expand selection</a>]
-                      Read.<br>
+                      Read all.<br>
                       In VS Code, play with this feature in frogStory.html <span class="File_Name">frogStory.html</span> in a manner analogous to the two examples in this <abbr>VSC</abbr> section.
                     </li>                              
                     <li>[<abbr>VSC</abbr>: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection','VSC');">Column (box) selection]</a>
-                      Read
+                      Read all.
                                             
                       <ol>
                         <li> <u>Exercise: [column box selection]</u> <br>
@@ -567,32 +567,29 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     Read this section.   Then follow the instructions 
                       <ol>
                         <li>
-                          Use Live Preview to view <span class="File_Name">frogStory.html</span>.   
-                          Read about Live Preview so that you can both use Live Preview 
-                          inside the sub-window within VS Code and use Live Preview opened in a separate browser.
-                          (You can view documentation for the Live Preview extension by selecting the Extensions list, searching for "Live Preview", and selecting 
-                          the "Live Preview" extension.  This will open a tab in VS Code with the "Live Preview" documentation).
-                          Use to "Live Preview" to open <span class="File_Name">basic-editing/frogStory.html</span> in an separate browser window.
-                          While running Live Preview modify text of the story about the frog.   Have him hop, skip and perform other antics relative to the water bug.
-                          Observe how the Live Preview browser immediately (with a minor delay) reflects the changes you make to the HTML source
+                          <span id="cursor"></span>
+                          Use Live Server to view <span class="File_Name">frogStory.html</span>.   
+                          Observe how the Live Server browser immediately (with a minor delay) reflects the changes you make to the HTML source as soon as you save the file changes.
+                          While running Live Server modify text of the story about the frog.                          
+                          Have him hop, skip and perform other antics relative to the water bug.                          
                         </li>
-                        <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-Live Preview" .</span> </li>
+                        <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-Live Server" .</span> </li>
                       </ol>                 
                     </li>                          
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_start-debugging','VSC')">Start debugging</a>]
                       <br> 
-                      Read "Start debugging", but note you already installed NodeJS in an earlier step.  "Start debugging" mentions creating a simple NodeJS app.
-                      This has already been done for you in <span class="File_Name">debugging/Hello</span>.  Use that provided
-                      app to test out the debugging features in "Start debugging" and the additional VSC sections list below.
+                      Read "Start debugging", but note you already installed NodeJS earlier in these instructions.  "Start debugging" mentions creating a simple NodeJS app.
+                      This has already been done for you, the file is in <span class="File_Name">debugging/Hello</span>.  Use that provided file
+                      app.js to test out the debugging features in "Start debugging" and to test the additional debugging features listed below.
                     </li>                    
-                    <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a>]</li>
+                    <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-and-debug-view','VSC')">Run and Debug view</a>] Read all.</li>
                     
-                    <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a>]</li>
+                    <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_run-menu','VSC')">Run menu</a>] Read all.</li>
                     
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-configurations','VSC')">Launch configurations</a>]
                       <ol>
-                          <li>Follow the <abbr>VSC</abbr> instructions to create the launch.json file.   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
-                          <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read </li>
+                          <li>Follow the <abbr>VSC</abbr> instructions to create the NodeJS launch.json file for the file in <span class="File_Name">debugging/Hello</span> .   Note, your launch.json will be slightly different than the <abbr>VSC</abbr> launch.json.</li>
+                          <li> [VSC: <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations','VSC')">launch-versus-attach-configurations</a>] - Read all.</li>
                           <li> [VSC:  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_add-a-new-configuration','VSC')">add-a-new-configuration</a>] - Perform these steps </li>
                           <li> <a class="Git_Commit"> <span class="Git_Commit_Message">git commit -m -add-a-new-configuration .</span> </li>
                       </ol>
@@ -607,7 +604,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_breakpoints','VSC')">Breakpoints</a>]
                       <ol>
                         <li>
-                          Read about the different breakpoint types.  Play with the  <span class="File_Name">debugging/Hello</span>, until you understand breakpoints.
+                          Read about the different breakpoint types.  Play with the  <span class="File_Name">debugging/Hello</span> code, until you understand breakpoints.
                         </li>
                         <li>
                           Take at least 1 screen shot of the breakpoints you set.  Save the image as a PNG file called "breakpoints" in <span class="File_Name">debugging/Hello</span>.
@@ -618,7 +615,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     
                     <li class="active">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_logpoints','VSC')">Logpoints</a>]
                       <ol>
-                        <li>Read about the different logpoint types.  Play with the  <span class="File_Name">debugging/Hello</span>, until you understand logpoints.</li>
+                        <li>Read about the different logpoint types.  Play with the  <span class="File_Name">debugging/Hello</span> code, until you understand logpoints.</li>
                         <li>
                           Take at least 1 screen shot of the logpoints you set.  Save the image as a PNG file called "logpoints" in <span class="File_Name">debugging/Hello</span>.
                         </li>
@@ -628,7 +625,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     
                     <li class="">[<abbr>VSC</abbr>:<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_data-inspection','VSC')">Data inspection</a>]
                       <ol>
-                        <li>Read about the different data inspections tools.  Play with the app.js, until you understand the data inspections tools.</li>
+                        <li>Read about the different data inspections tools.  Play with the <span class="File_Name">debugging/Hello</span> code, until you understand the data inspections tools.</li>
                         <li>
                           Take at least 1 screen shot of the data inspections tools inspecting the code in  <span class="File_Name">debugging/Hello</span>.
                           <br>Save the image as a PNG file called "inspection" in <span class="File_Name">debugging/Hello</span>.
