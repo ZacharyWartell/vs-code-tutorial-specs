@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
-    <title>ITCS xyz : Visual Studio Code Tutorial </title>    
+    <title>ITCS 5122 : Visual Studio Code Tutorial </title>    
     <link href="css/zjwgi/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
     <link href="css/zjwgi/GUI.css" rel="stylesheet" type="text/css">
     <link href="css/zjwgi/generic_instructions.css" rel="stylesheet" type="text/css">
@@ -31,6 +31,7 @@
       window.onload_Body = onload_Body;
       
       const c = document.getElementById("cursor");
+      console.log("***",c);
       if (c !== null) c.scrollIntoView();           
    </script>
 
@@ -38,9 +39,9 @@
         {
             "AssignmentName" :
             {
-                "courseNumber" : "3120",
+                "courseNumber" : "5122",
                 "number" : "t2",
-                "numberLongDir" : "3120-t2-vs-code-tutorial",
+                "numberLongDir" : "5122-t2-vs-code-tutorial",
                 "name" : "vs-code-tutorial"
             }
         }
@@ -115,7 +116,7 @@
             <h2 class="nocount Title">Spring 2024</h2>
             <h3 class="nocount Title">Professor: Zachary Wartell</h3>
             <div style="display : block; text-align: center;">
-              <div>Revision: <span class="Revision">Wed Nov 8 16:33:45 2023 -0500</span>
+              <div>Revision: <span class="Revision">Fri Jan 19 07:25:27 2024 -0500</span>
                 <sup> (<a href="https://cci-git.charlotte.edu/zwartell/vs-code-tutorial/-/commits/main/"
                     target="_blank">git logs</a>) </sup><br>
                 <br>
@@ -136,14 +137,14 @@
             <p>This page has been tested on Chrome Version 120.</p>
             <h1 class="nocount">Objectives</h1>
             <ul>
-              <li>Install and setup the Visual Studio Code IDE</li>
-              <li>Read through the basic documentation of Visual Studio Code's configuration, code editing and debugging. </li>
-              <li>Perform a variety of simple exercises to demonstrate your understanding of the above readings</li>
+              <li>Install and configure the Visual Studio Code</li>
+              <li>For students without prior Visual Studio Code experience, read through the basic documentation of Visual Studio Code code editing and debugging,
+                  and perform a variety of simple exercises to demonstrate your understanding of the above readings
+              </li>
             </ul>
           </section>          
           
-          <section><h1 class="Section"> Tutorial Structure </h1>
-              <span id="cursor"></span>
+          <section><h1 class="Section"> Tutorial Structure </h1>              
               <ul>
                   <li> <b>Part 1:  VS Code Configuration</b>: Part 1 is required.  It describes the installation and configuration
                      of Visual Studio Code with various plugins and libraries used in this course.
@@ -158,26 +159,26 @@
                       </ul>
                   </li>
               </ul>
+              The number of points this assignment is worth varies, depending on which options of each part you choose to complete based on 
+              your prior knowledge.
+              <ul>
+                <li><b>Part 1</b> + <b>Part 2: Option I - Prior Experience Survey </b>- is worth 22.5 points.</li>
+                <li><b>Part 1</b> + <b>Part 2: Option II - VS Code Tutorial </b>-  is worth a total of <span data-total-points=""></span> points. <br></li>
+              </ul>
+              
+              Each instruction item is prefixed with, |<i>number</i>|, that
+              displays the points for that item. |<i>number</i>| indicates that
+              item is worth <i>number</i> points.
+              <!-- 
+              |∑ <i>number</i>| indicates
+              that item is a composite item and the sum of all its parts is worth
+              <i>number</i> points.
+              -->
+              The complete rubric is listed separately in
+              Section <a href="#Section_Rubric">Rubric</a>
+              <!--  -->
 
               <section><h1 class="nocount">Grading</h1>
-                The number of points this assignment is worth varies, depending on which options of each part you choose to complete based on 
-                your prior knowledge.
-                <ul>
-                  <li><b>Part 1</b> + <b>Part 2: Option I - Prior Experience Survey </b>- is worth 22.5 points.</li>
-                  <li><b>Part 1</b> + <b>Part 2: Option II - VS Code Tutorial </b>-  is worth a total of <span data-total-points=""></span> points. <br></li>
-                </ul>
-                
-                Each instruction item is prefixed with, |<i>number</i>|, that
-                displays the points for that item. |<i>number</i>| indicates that
-                item is worth <i>number</i> points.
-                <!-- 
-                |∑ <i>number</i>| indicates
-                that item is a composite item and the sum of all its parts is worth
-                <i>number</i> points.
-                -->
-                The complete rubric is listed separately in
-                Section <a href="#Section_Rubric">Rubric</a>
-                <!--  -->
                 </section>     
           </section>
           <section data-point-fraction="10" data-optionset='{"name":"Part 1"}' class="Instruction_Section"><h1 class="Section">Part 1: Visual Studio Code </h1>
@@ -201,20 +202,23 @@
               -->  
             </div>
             <ol class="Instruction">              
-              <li class="Instruction_Todo" ><u>VSCode - Install:</u> Install Visual Studio Code from: 
-                  <a href="https://code.visualstudio.com/download" target="_blank">https://code.visualstudio.com/download</a>.
+              <li class="Instruction_Todo" ><u>VSCode - Install:</u> Install Visual Studio Code from:                   
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/download','VSC');">https://code.visualstudio.com/download</a>
               </li>
               <li class="Instruction_Todo" ><u>NodeJS - Install:</u>
-                  Install NodeJS <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>.
+                  Install NodeJS                     
+                    <a class="WindowOpenLeft" onclick="windowOpenLeft('https://nodejs.org/en','VSC');">https://nodejs.org/en</a>.
               </li>
               <li class="Instruction_Todo" ><u>Exercise [<abbr>VSC</abbr>: Getting started with Visual Studio Code]</u>: <br>                    
                 Watch the following video follow all the instructions to learn the basics of the VS Code GUI:<br>
                 <a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/introvideos/basics','VSC');">https://code.visualstudio.com/docs/introvideos/basics<br>
                 </a><br>
+                
+                
                 <div class="Side_Note"> <b>Side Note:</b>
-                  In the above video and it's associated reading, the VS Code Integrate Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
+                  In the above video and it's associated reading, the VS Code Integrated Terminal [View > Terminal (Ctrl+`)] lets you install and use a variety of terminals.
                   Earlier in this course you installed git-bash.  In the Terminal sub-window of the VS Code IDE, when you click on the down arrow (red box in image below), you should see bash included in listed choices of terminals.
-                  <figure class="Screen_Capture" tabindex="1" style="width : 100px;">
+                  <figure class="Screen_Capture" tabindex="1" style="width : 300px;">
                       <img src="images/terminal.png" alt="images/terminal.png">
                   </figure>
                 </div>                    
@@ -254,6 +258,11 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     down menu select the browser: "chrome."</li>
                 </ol>
               </li>
+
+              <!-- 
+              Begin:   ITCS x120  
+              ->
+              
               <li class="Instruction_Todo"><span class="Instruction_Title">Clone WGL PG Code</span>&nbsp;&nbsp;
                 In your ITCS_3120 directory, clone the WebGL Programming Guide
                 example code:
@@ -291,7 +300,10 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   title="Kaltura Capture recording - April 5th 2023, 9:53:43 am"
                   height="285" frameborder="0" width="400"></iframe> 
                 </li>
-              
+
+              <!- 
+              End: ITCS x120  
+              -->              
               
               <!--
               <li class="Instruction_Todo">Create a directory for this assignment in your class directory and cd to that directory. Perform all the exercise in this tutorial within
@@ -321,10 +333,10 @@ Hosts a local server in your workspace for you to preview your webpages on.
                 <ol>
                   <li>
                     Create new remote repo on cci-git called,<span class="File_Name" data-project-number-long-dir=""></span> using the
-                      procedures of <abbr>GT</abbr>: Appendix I <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations">Basic
-                        Git Operations.</a>                    
+                      procedures of <abbr>GT</abbr>: Appendix I <a href="https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html#Basic_Git_Operations" target="_blank">
+                        Basic Git Operations.</a>                    
                   </li>
-                  <li>
+                  <li> 
                     <table class="Code_Example" id="Code_Example1_0">
                       <tbody>
                         <tr>
@@ -333,7 +345,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                             <div> 
                               <code class="Shell_Code_Prompt-v2"> lucretius@monad42 ~/ITCS_<span data-course-number="">course-number</span>
                               </code> 
-                              <code class="Shell_Code_Input-v2"> git clone https://<span class="User_Input">Your UserID</span>:<span class="User_Input">Your PAT</span>@cci-git.charlotte.edu/<span class="User_Input">your_user_id</span>/<span class="File_Name" data-project-number-long-dir=""></span>.git <span class="File_Name" data-project-name-dir=""></span>
+                              <s></s><code class="Shell_Code_Input-v2"> git clone https://<span class="User_Input">Your UserID</span>:<span class="User_Input">Your PAT</span>@cci-git.charlotte.edu/<span class="User_Input">your_user_id</span>/<span class="File_Name" data-project-number-long-dir=""></span>.git <span class="File_Name" data-project-name-dir=""></span>
                               </code>
                             </div>
                           </td>
@@ -375,7 +387,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                           <code class="Shell_Code_Prompt-v2">lucretius@CCIWD-435B-1
                             ~/ITCS_<span class="DataField" data-course-number=""></span>/<span class="DataField" data-project-name-dir=""></span>
                           </code>
-                          <code class="Shell_Code_Input-v2">git remote add upstream https://<span class="User_Input">your_user_id</span>:<span class="User_Input">your_PAT</span>@cci-git.uncc.edu/UNCC_Graphics_Teaching/vs-code-tutorial.git
+                          <code class="Shell_Code_Input-v2">git remote add upstream https://<span class="User_Input">your_user_id</span>:<span class="User_Input">your_PAT</span>@cci-git.uncc.edu/uncc_graphics_teaching/vs-code-tutorial.git
                           </code>                            
                             <span class="Shell_Code_Comment">[... the above connects to
                             the original 'upstream' remote, to which you have
@@ -441,7 +453,8 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   </li>
                   <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-hello-world" .</span> </li>                          
                 </ol>
-              </li>                                      
+              </li>  
+              <!-- 
               <li class="Instruction_Todo" data-point-fraction="0">
                   <u>Optional Read [<a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes','VSC')">staging-and-committing-code-changes</a>]</u>:
                   This is optional.  All IDEs have extensions built in for performing Git operations.  You may optionally choose to use VS Code's Git GUI 
@@ -449,7 +462,10 @@ Hosts a local server in your workspace for you to preview your webpages on.
                   However, for more <b>all more complex</b> git 
                   instructions in this tutorial, you should continue using the git command-line in Bash in order to guarantee you are using the proper git command parameters.
               </li>
+              -->
+
               <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise[another app.js]</u>:                    
+                <span id="cursor"></span>
                 <ol class="Instruction_Option Instruction_Todo">                    
                     <li class="Instruction_Todo">In VS Code, edit the file <span class="File_Name">first/app.js</span>.  
                       Modify the file app.js so that the message printed to the console introduces yourself.</li>                          
@@ -480,7 +496,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                       In VS Code, edit the file <span class="File_Name">basic-editing/frogStory.html</span>.
                        Use the multi-cursor to change the file <span class="File_Name">frogStory.html</span> as follows:
                        <ol>
-                        <li>Modify frogStory.html's "pre.FrogStory" section in a manner similar to the '.global-message-list' example in "Multi Cursor Modifier".</li>
+                        <li>Modify frogStory.html's &lt;pre class="FrogStory"&gt; section in a manner similar to the '.global-message-list' example in "Multi Cursor Modifier".</li>
                         <li>Modify frogStory.html's 'The quick green frog' section in a manner similar to the 'The quick brown fox' example in "Multi Cursor Modifier".</li>
                         <li class="Instruction_Git_Commit"><span class="Git_Commit_Message">git commit -m "-Multi Cursor Modifier" .</span> </li>                          
                        </ol>
@@ -607,8 +623,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
                     <li class=""><a class="WindowOpenLeft" onclick="windowOpenLeft('https://code.visualstudio.com/docs/editor/debugging#_debugger-extensions','VSC')">Debugger extensions</a>
                     Read this section.   Then follow the instructions 
                       <ol>
-                        <li>
-                          <span id="cursor"></span>
+                        <li>                          
                           Use Live Server to view <span class="File_Name">frogStory.html</span>.   
                           Observe how the Live Server browser immediately (with a minor delay) reflects the changes you make to the HTML source as soon as you save the file changes.
                           While running Live Server modify text of the story about the frog.                          
