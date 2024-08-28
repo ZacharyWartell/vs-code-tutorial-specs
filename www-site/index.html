@@ -32,7 +32,38 @@
       
       const c = document.getElementById("cursor");
       console.log("***",c);
-      if (c !== null) c.scrollIntoView();           
+      if (c !== null) c.scrollIntoView();    
+      
+      if (false)
+      window.addEventListener("popstate", (event) => {
+          //alert(
+          //  `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+          //);
+          const s = document.location.toString().split('#');
+          if (s.length == 2)
+          {
+            console.log(s[1]);
+            const id = document.getElementById(s[1]);
+            console.log("id:",id);
+            if (id !== null)
+              id.scrollIntoView();
+            else
+            {
+              const mc = document.querySelector("article");
+              console.log("mc 1:"+mc);
+              mc.scrollIntoView();
+            }
+          } else
+          {
+              const mc = document.querySelector("article");
+              console.log("mc 2:"+mc+mc.classList);
+              mc.scrollIntoView({ behavior: "instant", block: "start" });
+          }
+             
+          console.log(
+            `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+          );
+        });
    </script>
 
     <script type="application/json" id="AssignmentName">
@@ -159,12 +190,8 @@
                       </ul>
                   </li>
               </ul>
-              The number of points this assignment is worth varies, depending on which options of each part you choose to complete based on 
-              your prior knowledge.
-              <ul>
-                <li><b>Part 1</b> + <b>Part 2: Option I - Prior Experience Survey </b>- is worth 22.5 points.</li>
-                <li><b>Part 1</b> + <b>Part 2: Option II - VS Code Tutorial </b>-  is worth a total of <span data-total-points=""></span> points. <br></li>
-              </ul>
+              The number of points this assignment is worth depends on what combinations of options you choose to complete.
+              (For details see Section <a href="#Section_Rubric">Rubric</a>).
               
               Each instruction item is prefixed with, |<i>number</i>|, that
               displays the points for that item. |<i>number</i>| indicates that
@@ -174,12 +201,9 @@
               that item is a composite item and the sum of all its parts is worth
               <i>number</i> points.
               -->
-              The complete rubric is listed separately in
-              Section <a href="#Section_Rubric">Rubric</a>
+              
               <!--  -->
-
-              <section><h1 class="nocount">Grading</h1>
-                </section>     
+              
           </section>
           <section data-point-fraction="10" data-optionset='{"name":"Part 1"}' class="Instruction_Section"><h1 class="Section">Part 1: Visual Studio Code </h1>
             <div>
@@ -464,8 +488,7 @@ Hosts a local server in your workspace for you to preview your webpages on.
               </li>
               -->
 
-              <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise[another app.js]</u>:                    
-                <span id="cursor"></span>
+              <li class="Instruction_Todo" data-point-no-fraction="0.41666666"><u>Exercise[another app.js]</u>:                                    
                 <ol class="Instruction_Option Instruction_Todo">                    
                     <li class="Instruction_Todo">In VS Code, edit the file <span class="File_Name">first/app.js</span>.  
                       Modify the file app.js so that the message printed to the console introduces yourself.</li>                          
