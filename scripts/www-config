@@ -1,5 +1,5 @@
 # www-config file (used by zjwgi/publishWWW) for https://gitlab.com/zwartell/javascript-tutorial.git project
 ftphost webpages.uncc.edu
-ftpdir 'public_html/Teaching/ITCS 3120 - VS Code Tutorial'
+ftpdir 'public_html/Teaching/ITCS 5122 - VS Code Tutorial'
 ftpuser zwartell
 htmlfile ./index.html
