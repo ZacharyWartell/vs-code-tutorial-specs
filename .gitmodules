@@ -6,3 +6,7 @@
 	path = git-modules/zjw-generic-instructions.git
 	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
 	branch = version3
+[submodule "git-modules/zxw-git-modules.git"]
+	path = git-modules/zxw-git-modules.git
+	url = https://gitlab.com/zachary-wartell-public/zxw-git-modules.git
+	branch = main
