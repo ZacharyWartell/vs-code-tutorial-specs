@@ -2,3 +2,7 @@
 	path = www-site/git_modules/zjwgi
 	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
 	branch = version2
+[submodule "git-modules/zjw-generic-instructions.git"]
+	path = git-modules/zjw-generic-instructions.git
+	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
+	branch = version3
