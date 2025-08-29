@@ -1,2 +1,1 @@
-export ZJWP_PROJECT_WWW_SUBDIR=www-site
-export ZJWP_GIT_MODULE_SUBDIR=git-modules
+export ZJWP_PROJECT_WWW_SUBDIR="www-site"
