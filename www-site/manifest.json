@@ -1,12 +1,9 @@
-/* https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-*/
 {
     "name": "VS Code Tutorial",
     "version": "1.2.4",
     "short_name": "VS Code Tutorial",
-    "author": "Zachary Wartell",
-    //"start_url":"http://127.0.0.1:5502/www-site/index.html",
-    "start_url":"https://www.zacharywartell.net/zax-mindscape/index.html",
+    "author": "Zachary Wartell",    
+    "start_url":"https://webpages.charlotte.edu/zwartell/Teaching/ITCS%203120%20-%20VS%20Code%20Tutorial/index.html",
     "display":"standalone",
     "description" : "",
     "icons": [
