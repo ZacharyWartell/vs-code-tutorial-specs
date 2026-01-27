@@ -15,4 +15,4 @@
 	url = git@github.com:ZacharyWartell/zjw-pwa-template.git
 [submodule "git-modules/zxw-env.git"]
 	path = git-modules/zxw-env.git
-	url = git@gitlab.com:/zachary-wartell/zxw-env.git
+	url = git@github.com:ZacharyWartell/zxw-env.git
