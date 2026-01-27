@@ -4,7 +4,7 @@
 	branch = master
 [submodule "git-modules/zxw-git-modules.git"]
 	path = git-modules/zxw-git-modules.git
-	url = git@gitlab.com:/zachary-wartell-public/zxw-git-modules.git
+	url = git@github.com:ZacharyWartell/zxw-git-modules.git
 	branch = main
 [submodule "git-modules/zxw-mvc.git"]
 	path = git-modules/zxw-mvc.git
