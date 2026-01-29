@@ -43,6 +43,10 @@
       import * as ZxW_GUI from "ZxW_GUI";
       import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
       import * as CAW from "./modules/zjw-generic-instructions/scripts/ClassAssignmentWartell.js";
+
+      //const DEV_BUILD=true;
+      const DEV_BUILD=false;
+
       class App extends ZxW_GUI.DefaultApplication
       {
           constructor(){super();}
@@ -51,7 +55,7 @@
       await ZxW_GUI.DefaultApplication.fetchUserDocument(app, "vs-code-tutorial.zxw-doc.html");
 
       window.BreadCrumb = Rubric.BreadCrumb;
-      CAW.main(150,false);
+      CAW.main(150,!DEV_BUILD);
 
       
       window.Visibility_Toggle = CAW.Visibility_Toggle; 
@@ -65,9 +69,11 @@
       //function onload_Body() { console.log("function onload_Body()");}
       //window.onload_Body = onload_Body;
       
-      const c = document.getElementById("cursor");
-      console.log("***",c);
-      if (c !== null) c.scrollIntoView();    
+      if (DEV_BUILD)
+      {
+        const c = document.getElementById("cursor");        
+        if (c !== null) c.scrollIntoView();    
+      }
       
       if (false)
       window.addEventListener("popstate", (event) => {
