@@ -12,5 +12,5 @@ Instructions and interactive grading rubric for a VS Code IDE configuration and 
 required in Dr. Wartell's course work and research projects.
 
 - WWW: 
-    - https://webpages.charlotte.edu/zwartell/Teaching/ITCS%20VS%20Code%20Tutorial/
+    - https://webpages.charlotte.edu/zwartell/Teaching/itcs-vs-code-tutorial
 - GIT: https://github.com/ZacharyWartell/git-tutorial-and-coding-standards.git
