@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1,h2 { text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h1>My First WebPage</h1>
+        <h2>YOUR NAME</h2>
+    </body>
+</html>
