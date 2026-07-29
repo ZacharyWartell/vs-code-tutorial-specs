@@ -39,6 +39,22 @@
      -->
     <script src="modules/zjw-generic-instructions/scripts/generic_instructions.js"></script>
     <!-- END:  ZJW Generic Instructions <head> -->
+
+    <script>
+      if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("service-worker.js").then(
+            (registration) => {
+              console.log("Service worker registration successful:", registration);
+            },
+            (error) => {
+              console.error(`Service worker registration failed: ${error}`);
+            },
+          );
+        } else {
+          console.error("Service workers are not supported.");
+        }   
+    </script>
+          
     <script type="module" lang="javascript">
       import * as ZxW_GUI from "ZxW_GUI";
       import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
